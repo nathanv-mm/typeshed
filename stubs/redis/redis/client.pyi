@@ -56,7 +56,7 @@ _Value = Union[bytes, float, int, Text]
 _Key = Union[Text, bytes]
 
 # Lib returns str or bytes depending on Python version and value of decode_responses
-_StrType = TypeVar("_StrType", bound=Union[Text, bytes])
+_StrType = TypeVar("_StrType", bound=Text)
 
 class Redis(Generic[_StrType]):
     RESPONSE_CALLBACKS: Any
